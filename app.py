@@ -4,10 +4,19 @@
 Main entrypoint
 """
 from model import *
-from bottle import Bottle, route, run, request, response, get, debug, abort
+from bottle import Bottle, route, run, request, response, get, debug, abort, static_file
 import json
 
 app = Bottle()
+
+@app.route('/static/<filename:path>', method='GET')
+def serve_static(filename):
+    """
+    Serve os arquivos estaticos para o cliente
+    """
+    path = os.getcwd() + os.path.sep +'static' + os.path.sep
+    return static_file(filename, root=path)
+    
 
 @app.route('/', methods='GET')
 def index():
