@@ -2,3 +2,7 @@
 db/*.*
 .git
 thumbs.db
+bin/*
+include/*
+lib/*
+local/*
