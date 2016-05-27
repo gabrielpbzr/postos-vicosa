@@ -45,7 +45,6 @@ class Usuario(BaseModel):
     """
     Classe representando o usuario do sistema
     Attributes:
-        uid: Integer - identificador do registro
         nome: String
         email: String
         senha: String
@@ -75,7 +74,6 @@ class Posto(BaseModel):
     """
     Classe representando uma instancia de um posto
     Attributes:
-        pid = Integer - identificador do registro
         nome = String - nome do Posto
         longitude e latitude = coordenadas da localizacao do posto no GPS
     """
